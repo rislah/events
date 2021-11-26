@@ -11,8 +11,7 @@ generate:
   go_options:
     import_path: github.com/rislah/events/schema
 
-
   plugins:
     - name: go
       type: go
-      output: ./pkg
+      output: ../gen
