@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tracking.identity.v1;
+
+option go_package = "github.com/rislah/events/identityv1";
+option java_multiple_files = true;
+option java_package = "com.tracking.identity.v1";
+
+import "schema/main.proto";
+
+message UserLoginAttempt {
+  option (protobuf.extension.v1.topic_name) = "tracking.identity.login-attempt";
+  string user_id = 1;
+  string ip = 2;
+  enum Result {
+    RESULT_INVALID = 0;
+    RESULT_SUCCESS = 1;
+    RESULT_FAILED = 2;
+  }
+  Result result = 3;
+}

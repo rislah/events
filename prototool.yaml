@@ -1,0 +1,18 @@
+protoc:
+  version: 3.17.3
+
+lint:
+  group: uber2
+
+  rules:
+    remove: []
+
+generate:
+  go_options:
+    import_path: github.com/rislah/events/schema
+
+
+  plugins:
+    - name: go
+      type: go
+      output: ./pkg
