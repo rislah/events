@@ -22,14 +22,14 @@ generate:
   plugins:
     - name: go
       type: go
-      output: ../pkg
+      output: ../pkg/go
 
     - name: java
-      output: ../pkg
-      file_suffix: jar
-
-    - name: descriptor_set
-      output: ../pkg
-      file_suffix: bin
-      include_imports: true
-      include_source_info: true
+      output: ../pkg/java/src/main/java
+#      file_suffix: jar
+#
+#    - name: descriptor_set
+#      output: ../pkg
+#      file_suffix: bin
+#      include_imports: true
+#      include_source_info: true
