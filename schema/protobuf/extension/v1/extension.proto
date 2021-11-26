@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package protobuf.extension.v1;
 
-option go_package = "github.com/rislah/events/protobuf/extension/v1;extension";
+option go_package = "protobuf/extension/v1/;extensionv1";
 import "google/protobuf/descriptor.proto";
 
 extend google.protobuf.MessageOptions {

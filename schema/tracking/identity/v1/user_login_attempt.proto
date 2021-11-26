@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package tracking.identity.v1;
 
-option go_package = "github.com/rislah/events/identityv1";
+option go_package = "tracking/identity/v1;identityv1";
 option java_multiple_files = true;
 option java_package = "com.tracking.identity.v1";
 
