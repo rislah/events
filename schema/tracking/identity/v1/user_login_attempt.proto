@@ -4,6 +4,7 @@ package tracking.identity.v1;
 
 option go_package = "tracking/identity/v1;identityv1";
 option java_multiple_files = true;
+option java_outer_classname = "UserLoginAttemptProto";
 option java_package = "com.tracking.identity.v1";
 
 import "protobuf/extension/v1/extension.proto";

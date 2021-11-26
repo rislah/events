@@ -5,7 +5,13 @@ lint:
   group: uber2
 
   rules:
-    remove: []
+    remove:
+      - FILE_OPTIONS_REQUIRE_CSHARP_NAMESPACE
+      - FILE_OPTIONS_REQUIRE_OBJC_CLASS_PREFIX
+      - FILE_OPTIONS_REQUIRE_PHP_NAMESPACE
+      - FILE_OPTIONS_EQUAL_GO_PACKAGE_V2_SUFFIX
+      - FILE_OPTIONS_GO_PACKAGE_NOT_LONG_FORM
+
 
 generate:
   go_options:
@@ -14,4 +20,14 @@ generate:
   plugins:
     - name: go
       type: go
-      output: ../gen
+      output: ../pkg
+
+    - name: java
+      output: ../pkg
+      file_suffix: jar
+
+    - name: descriptor_set
+      output: ../pkg
+      file_suffix: bin
+      include_imports: true
+      include_source_info: true
